@@ -12,19 +12,19 @@
  * 1. realizar el arreglo de UNIVERSIDAD
  */
 
-const UNIVERSIDADES =
+ const UNIVERSIDADES =
     [
         { nit: 1, "nombre": "UdeM", "adireccion": "Cl 34 # 10-11", "telefono": "3030164839" },
         { nit: 2, "nombre": "UdeA", "direccions": "Cl 63 # 2-12", "telefono": "3103850237" },
         { nit: 3, "nombre": "UPB", "direccion": "Cr 4 # 87-11", "telefono": "3024329876" },
         { nit: 4, "nombre": "EIA", "direccion": "Cl 18 # 10-1", "telefono": "3025968439" },
         { nit: 1, "nombre": "UNAl", "direccion": "Cr 44 # 40-13", "telefono": "3203847590" },
-    ]
+    ] 
 
 /**
 * 2. realizar el arreglo de ESTUDIANTES
 */
-const ESTUDIANTES =
+ const ESTUDIANTES =
     [
         { nit_universidad: 1, "nombre": "Carlos Ángel", "apellidos": "González Giraldo", "id": 1020497009, edad: 19, "semestre": "3", valor_semestre: 40 },
         { nit_universidad: 2, "nombre": "Diego", "apellidos": "Álvarez Atamiranda", "id": 1039102082, edad: 15, "semestre": "3", valor_semestre: 60 },
@@ -39,7 +39,7 @@ const ESTUDIANTES =
         { nit_universidad: 2, "nombre": "Alexander", "apellidos": "Restrepo Múnera", "id": 1000918870, edad: 22, "semestre": "5", valor_semestre: 40 },
         { nit_universidad: 4, "nombre": "Santiago", "apellidos": "Posada Bernal", "id": 1010027176, edad: 21, "semestre": "3", valor_semestre: 100 },
 
-    ]
+    ] 
 
 /**
  *  3. Identificación, nombre y apellidos de los 5 estudiantes que tienen el mayor valor del semestre pagado
@@ -130,13 +130,13 @@ const PromedioUniversidad = () => {
 
     }
 }
-PromedioUniversidad()
+PromedioUniversidad(); 
 
 /**
  * 5. Estudiantes menores de edad de cada universidad
  */
 
-console.log(" ");
+ console.log(" ");
 console.log("*************************** MENORES DE EDAD POR UNIVERSIDAD ***************************");
 console.log(" ");
 
@@ -152,4 +152,4 @@ const buscar_menor = () => {
         }
     }
 }
-buscar_menor();
+buscar_menor(); 
