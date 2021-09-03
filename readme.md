@@ -1,23 +1,18 @@
-# API AGENCIA DE VIAJES - ??
+# API DE JUPITER
+
+## Usuarios
+### Endpoints
+    - Registro          `http://localhost:3000/usuarios`
+    - Modificar usuario `http://localhost:3000/usuarios`
+    - Eliminar usuario  `http://localhost:3000/usuarios/1`
+    - Consultar usuario `http://localhost:3000/usuarios/05`
+    - Login             `http://localhost:3000/login`
+### Informacion
+    - Nombre
+    - Apellidos
+    - id
+    - clave
 
 - Reservas
-    - Crear reservas
-    - Modificar reservas
-    - Eliminar reservas    
-    - Consultas de reservas por parte del usuario
-    - Consultas de reservas por parte del administrador
-- Roles
-    - Crear
-    - Consultar 
-    - Modificar 
-    - Eliminar
-- Usuarios
-    - Registro
-    - Modificar usuario
-    - Eliminar usuario 
-    - Consultar usuario
-    - Login
-- Lugares de destino 
-    - Consultas de lugares
-    - Crear lugar de destino
-    - Eliminae lugares de destino 
+- Proyectos
+- Categorias

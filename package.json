@@ -15,7 +15,7 @@
     "nodejs",
     "postgres"
   ],
-  "author": "Mateo Martinez",
+  "author": "Mateo Martinez, Sebastian Viafara, Santiago Escobar, Santiago Posada, Alexander Restrepo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mateommarulanda/DlloWeb/issues"
