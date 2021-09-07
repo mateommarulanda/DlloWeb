@@ -4,8 +4,8 @@
 ### Endpoints
     - Registro          `http://localhost:3000/usuarios`
     - Modificar usuario `http://localhost:3000/usuarios`
-    - Eliminar usuario  `http://localhost:3000/usuarios/id`
-    - Consultar usuario `http://localhost:3000/usuarios/id?`
+    - Eliminar usuario  `http://localhost:3000/usuarios/:id`
+    - Consultar usuario `http://localhost:3000/usuarios/:id?`
     - Login             `http://localhost:3000/login`
 ### Informacion
     - Nombre
@@ -17,8 +17,8 @@
 ### Endpoints
     - Crear Proyectos       `http://localhost:3000/usuarios`
     - Actualizar Proyectos  `http://localhost:4000/proyectos`
-    - Ver Proyectos         `http://localhost:4000/proyectos/codigo?`
-    - Eliminar Proyectos    `http://localhost:4000/proyectos/codigo`
+    - Ver Proyectos         `http://localhost:4000/proyectos/:codigo?`
+    - Eliminar Proyectos    `http://localhost:4000/proyectos/:codigo`
 ### Informacion
     - codigo
     - Nombre
@@ -28,10 +28,10 @@
 
 ## Reservas
 ### Endpoints
-    - Crear reserva         `http://localhost:3002/reservas`
-    - Eliminar reserva      `http://localhost:3002/reservas/id`
-    - Ver reserva           `http://localhost:3002/reservas/id?`
-    - Modificar reserva     `http://localhost:3002/reservas`
+    - Crear reserva         `http://localhost:3002/Reservas`
+    - Eliminar reserva      `http://localhost:3002/Reservas/:id`
+    - Ver reserva           `http://localhost:3002/Reservas/:id?`
+    - Modificar reserva     `http://localhost:3002/Reservas`
 ### Informacion
     - Id
     - Lugar
@@ -40,8 +40,8 @@
 ## Categorias
 ### Endpoints
     - Crear categoria       `http://localhost:3001/categorias`
-    - Eliminar categoria    `http://localhost:3001/categorias/id`
-    - Ver categoria         `http://localhost:3001/categorias/id?`
+    - Eliminar categoria    `http://localhost:3001/categorias/:id`
+    - Ver categoria         `http://localhost:3001/categorias/:id?`
     - Modificar categoria   `http://localhost:3001/categorias`
 ### Informacion
     - Nombre
