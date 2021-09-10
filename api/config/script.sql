@@ -5,3 +5,7 @@ CREATE TABLE public.usuarios{
     rol int4 NOT NULL,
     clave varchar NOT NULL
 }
+CREATE TABLE public.categorias (
+	nombre varchar NOT NULL,
+	id varchar NOT NULL
+);
