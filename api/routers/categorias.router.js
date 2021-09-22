@@ -68,4 +68,4 @@ router.get('/categorias/:id?', (req, res) => {
     })
     
 })
-odule.exports = router
+module.exports = router

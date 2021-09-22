@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 
 // IMPORTAR RUTAS USUARIOS
-const router_usuarios = require('./routers/usuarios.router')
+const router_usuarios = require('./routers/usuarios.router');
 app.use(router_usuarios)
 // IMPORTAR RUTAS CATEGORIAS
 const router_categorias =  require('./routers/categorias.router');
