@@ -4,7 +4,7 @@ const router = express.Router()
 const controller = require('../controllers/reservas.controller')
 
 //CREAR PROYECTO
-
+/* 
 router.post('/Reservas', async (req, res)=>{
     let reserva = req.body
     try {  
@@ -42,7 +42,7 @@ router.put('/Reservas', async (req, res)=>{
 })
 
 // Eliminar reserva con id dado
-
+ */
 router.delete('/Reservas/:id', async (req, res) => {
     try {
         let id = req.params.id

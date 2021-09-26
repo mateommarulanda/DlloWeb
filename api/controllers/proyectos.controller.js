@@ -33,7 +33,7 @@ const consultarProyecto = async (codigo) => {
  * @param {String} codigo Codigo del proyecto
  * @returns Informacion de la ejecucion en base de datos
  */
-const eliminarProyecto = (codigo) => {
+const eliminarProyecto = async (codigo) => {
     const sql = 'DELETE FROM public.proyectos WHERE codigo = $1'
     const datos = [codigo]
     return await _pg.ejecutarQuery(sql, datos)

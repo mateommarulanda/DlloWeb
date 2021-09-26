@@ -5,46 +5,27 @@ const controller = require('../controllers/proyectos.controller')
 
 //CREAR PROYECTO
 
-router.post('/Proyectos', async (req, res)=>{    
+router.post('/proyectos', async (req,res) =>{
     let proyecto = req.body
-    try{
-        let respuesta_db = await controller.crearProyecto(proyecto)
-        //let respuesta_db = await controller.crearProyecto(proyecto)
-        let info = respuesta_db.rowCount == 1? `Proyecto registrado: ${proyecto.codigo}` : ''
-        let message = respuesta_db.rowCount == 1? 'Proyecto registrado' : 'No se registró el proyecto'
-        return res.send({ok: respuesta_db.rowCount == 1, message, info})
-    } catch(error){
-        let codigo_pg = error.code
-        if(codigo_pg == '23505'){
-            return res.status(400).send({ok: false, message: 'Proyecto ya registrado', info: null})
-        }else{
-            return res.status(500).send({ok: false, message: 'Error no controlado', info: null})
-        }
-        
-    }
-    
-})
-router.post('/usuarios', async (req,res) =>{
-    let usuario = req.body
     try {
-        let respuesta_db = await controller.crearUsuario(usuario)
-        let info = respuesta_db.rowCount == 1 ? `Usuario creado: ${usuario.id}` : ''
-        let message = respuesta_db.rowCount == 1 ? 'Usuario creado correctamente' : 'No se creo el usuario.'
+        let respuesta_db = await controller.crearProyecto(proyecto)
+        let info = respuesta_db.rowCount == 1 ? `Proyecto creado: ${proyecto.codigo}` : ''
+        let message = respuesta_db.rowCount == 1 ? 'Proyecto creado correctamente' : 'No se creo el proyecto.'
         return res.send({ ok: respuesta_db.rowCount == 1, message, info })
     } catch (error) {
         let codigo_pg = error.code
         if (codigo_pg == '23505') {
-            return res.status(400).send({ ok: false, message: `El usuario (${usuario.id}) ya esta creado.`, info: null })
+            return res.status(400).send({ ok: false, message: `El proyecto (${proyecto.nombre}) ya esta creado.`, info: null })
         } else {
             console.log(error);
             return res.status(500).send({ ok: false, message: 'Ha ocurrido un error no controlado', info: error })
         }
     }    
-})
+}) 
 
 //MODIFICAR PROYECTO 
 
-router.put('/Proyectos', async (req, res)=>{
+router.put('/proyectos', async (req, res)=>{
     let proyecto = req.body
     try{
         let respuesta_db = await controller.actualizarProyecto(proyecto)
@@ -60,10 +41,10 @@ router.put('/Proyectos', async (req, res)=>{
 
 // ELIMINAR PROYECTO 
 
-router.delete('/Proyectos/:codigo', (req, res)=>{
+router.delete('/proyectos/:codigo', async (req, res)=>{
     try{
         let codigo = req.params.codigo
-        let respuesta_db = await controller.crearProyecto(proyecto)
+        let respuesta_db = await controller.eliminarProyecto(proyecto)
         let info = respuesta_db.rowCount == 1? `Proyecto elimiando: ${codigo}` : ''
         let message = respuesta_db.rowCount == 1? 'Proyecto eliminado' : 'No se eliminó el proyecto'
         return res.send({ok: respuesta_db.rowCount == 1, message, info})
@@ -75,7 +56,7 @@ router.delete('/Proyectos/:codigo', (req, res)=>{
 
 // CONSULTAR PROYECTO 
 
-router.get('/Proyectos/:codigo?', (req, res)=>{
+router.get('/proyectos/:codigo?', (req, res)=>{
     let codigo = req.params.codigo
     controller.consultarProyecto(codigo).then(respuesta_db => {
         let info = respuesta_db.rows

@@ -15,7 +15,7 @@
     
 ## Proyectos
 ### Endpoints
-    - Crear Proyectos       `http://localhost:3000/usuarios`
+    - Crear Proyectos       `http://localhost:3000/proyectos`
     - Actualizar Proyectos  `http://localhost:3000/proyectos`
     - Ver Proyectos         `http://localhost:3000/proyectos/:codigo?`
     - Eliminar Proyectos    `http://localhost:3000/proyectos/:codigo`
